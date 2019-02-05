@@ -9,6 +9,7 @@ class CreateApplicants < ActiveRecord::Migration[5.2]
       t.string :linkedin
       t.string :github
       t.string :portfolio
+      t.string :password_digest
 
       t.timestamps
     end
