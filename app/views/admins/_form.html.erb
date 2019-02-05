@@ -21,6 +21,16 @@
     <%= form.text_field :email %>
   </div>
 
+   <div class="field">
+    <%= form.label :create_password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confirm_password %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
