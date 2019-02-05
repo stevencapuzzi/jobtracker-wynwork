@@ -7,7 +7,8 @@ class CreateApplicants < ActiveRecord::Migration[5.2]
       t.string :phone
       t.text :bio
       t.string :linkedin
-      t.stringportfolio :github
+      t.string :github
+      t.string :portfolio
 
       t.timestamps
     end
