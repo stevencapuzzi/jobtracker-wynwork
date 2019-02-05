@@ -1,0 +1,52 @@
+<%= form_with(model: applicant, local: true) do |form| %>
+  <% if applicant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
+
+      <ul>
+      <% applicant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cohort %>
+    <%= form.text_field :cohort %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linkedin %>
+    <%= form.text_field :linkedin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :github %>
+    <%= form.text_field :github %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

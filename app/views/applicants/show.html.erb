@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @applicant.name %>
+</p>
+
+<p>
+  <strong>Cohort:</strong>
+  <%= @applicant.cohort %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @applicant.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @applicant.phone %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @applicant.bio %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @applicant.linkedin %>
+</p>
+
+<p>
+  <strong>Github:</strong>
+  <%= @applicant.github %>
+</p>
+
+<%= link_to 'Edit', edit_applicant_path(@applicant) %> |
+<%= link_to 'Back', applicants_path %>
