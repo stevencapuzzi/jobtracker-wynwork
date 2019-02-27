@@ -25,6 +25,7 @@ class ApplicantsController < ApplicationController
   # POST /applicants.json
   def create
     @applicant = Applicant.new(applicant_params)
+    session[:applicant_id] = @applicant.id
 
     respond_to do |format|
       if @applicant.save

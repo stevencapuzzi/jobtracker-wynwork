@@ -5,7 +5,7 @@ class CreateJobs < ActiveRecord::Migration[5.2]
       t.string :position
       t.string :status
       t.string :link
-
+      t.belongs_to :applicant, foreign_key: true
       t.timestamps
     end
   end

@@ -4,8 +4,8 @@ module SessionsHelper
         session[:applicant_id] = applicant.id
     end
 
-    def current_user
-        if session[:user_id]
+    def current_applicant
+        if session[:applicant_id]
           @current_applicant ||= Applicant.find_by(id: session[:applicant_id])
         end
     end
