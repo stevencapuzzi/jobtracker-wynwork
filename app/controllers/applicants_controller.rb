@@ -71,4 +71,9 @@ class ApplicantsController < ApplicationController
     def applicant_params
       params.require(:applicant).permit(:name, :cohort, :email, :phone, :bio, :linkedin, :github, :password, :passwword_confirmation)
     end
+
+    def allowed_params
+      params.require(:sessions).permit(:email, :passwword, :passwword_confirmation)
+    end
+
 end
