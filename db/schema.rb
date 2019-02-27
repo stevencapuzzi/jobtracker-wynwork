@@ -45,13 +45,8 @@ ActiveRecord::Schema.define(version: 2019_02_05_164103) do
     t.bigint "applicant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["applicant_id"], name: "index_jobs_on_applicant_id"
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+  add_foreign_key "jobs", "applicants"
 end

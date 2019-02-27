@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.where(applicant_id: current_applicant.id)
   end
 
   # GET /jobs/1
@@ -25,7 +25,7 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(job_params)
-    @job.applicant_id = applicant.id
+    @job.applicant_id = current_applicant.id
 
     respond_to do |format|
       if @job.save
