@@ -25,6 +25,7 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(job_params)
+    @job.applicant_id = applicant.id
 
     respond_to do |format|
       if @job.save
