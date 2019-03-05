@@ -25,6 +25,7 @@ class AdminsController < ApplicationController
   # POST /admins.json
   def create
     @admin = Admin.new(admin_params)
+    session[:admin_id] = @admin.id
 
     respond_to do |format|
       if @admin.save
@@ -70,5 +71,9 @@ class AdminsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_params
       params.require(:admin).permit(:name, :email, :password, :passwword_confirmation)
+    end
+
+    def allowed_params
+      params.require(:sessions).permit(:email, :passwword, :passwword_confirmation)
     end
 end
