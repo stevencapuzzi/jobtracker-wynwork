@@ -4,9 +4,16 @@ class ApplicationController < ActionController::Base
     def current_applicant
         Applicant.find(session[:applicant_id])
     end
+
+    def current_admin
+        Admin.find(session[:admin_id])
+    end
     
     private
-    def logged_in?
-        @current_applicant ||= Applicant.find(session[:applicant_id]) if session[:applicant_id]
-    end
+    def is_signed_in?
+        if session[:applicant_id] || session[:admin_id]
+        else 
+         redirect_to login_url
+        end
+     end
 end
