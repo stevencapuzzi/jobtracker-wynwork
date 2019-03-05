@@ -16,4 +16,10 @@ class ApplicationController < ActionController::Base
          redirect_to login_url
         end
      end
+
+     def is_admin?
+        if session[:admin_id]
+         redirect_to applicants_path
+        end
+     end
 end

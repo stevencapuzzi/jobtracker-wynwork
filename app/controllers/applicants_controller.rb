@@ -10,6 +10,7 @@ class ApplicantsController < ApplicationController
   # GET /applicants/1
   # GET /applicants/1.json
   def show
+    @jobs = Job.where(applicant_id: params[:id])
   end
 
   # GET /applicants/new

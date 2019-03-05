@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
-  before_action :is_signed_in?
+  before_action :is_signed_in?, :is_admin?
 
   # GET /jobs
   # GET /jobs.json
