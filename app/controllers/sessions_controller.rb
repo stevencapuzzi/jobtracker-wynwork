@@ -4,10 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    applicant = Applicant.find_by_email(params[:email])
+     applicant = Applicant.find_by_email(params[:email])
     if applicant && applicant.authenticate(params[:password])
       session[:applicant_id] = applicant.id
       redirect_to root_url, notice: "Logged In"
+    elsif applicant==nil
+    admin = Admin.find_by_email(params[:email])
+    session[:admin_id] = admin.id
+    redirect_to applicants_path, notice: "Logged In"
     else
       redirect_to new_session_path, notice: "Email or passwword is invalid"
     end
