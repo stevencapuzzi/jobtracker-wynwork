@@ -10,6 +10,11 @@ class ApplicantsController < ApplicationController
   # GET /applicants/1
   # GET /applicants/1.json
   def show
+    if is_admin?
+      @jobs = Job.where(applicant_id: params[:id])
+    else
+      redirect_to root_url
+    end
   end
 
   # GET /applicants/new
