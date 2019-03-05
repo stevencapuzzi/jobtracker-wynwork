@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '>= 2.3.7'
 
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 
 gem 'rb-readline'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
