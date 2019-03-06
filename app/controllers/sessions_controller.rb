@@ -11,9 +11,13 @@ class SessionsController < ApplicationController
       redirect_to root_url, notice: "Logged In"
     elsif applicant==nil
     admin = Admin.find_by_email(params[:email])
-    session[:admin_id] = admin.id
-    session[:applicant_id] = nil
-    redirect_to applicants_path, notice: "Logged In"
+      if admin && admin.authenticate(params[:password])
+        session[:admin_id] = admin.id
+        session[:applicant_id] = nil
+        redirect_to applicants_path, notice: "Logged In"
+      else
+        redirect_to new_session_path, notice: "Email or passwword is invalid"
+      end
     else
       redirect_to new_session_path, notice: "Email or passwword is invalid"
     end
