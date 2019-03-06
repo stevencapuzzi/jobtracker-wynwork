@@ -20,7 +20,7 @@
     <% @jobs.each do |job| %>
       <tr>
         
-        <td class="fontz" ><%= job.created_at %></td>
+        <td class="fontz" ><%= job.created_at.to_formatted_s(:short) %></td>
         <td class="fontz" ><%= job.company %></td>
         <td class="fontz" ><%= job.position %></td>
         <td class="fontz" ><%= job.status %></td>
