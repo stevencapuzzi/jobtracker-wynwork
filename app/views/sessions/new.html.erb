@@ -1,21 +1,26 @@
-<div class="margindiv">
+<div class="formdiv">
 
         <%= form_tag({controller: "sessions", action: "create"}) do %>
+
           <div class="container">
             <% flash.each do |key, value| %>
               <div style="color:red;" class="alert alert-<%= key %>"><%= value %></div>
              <% end %>
              <%= yield %>
          </div>
-          <div class="login-field">
+
+          <div class="field">
            <%= label_tag :email %>
-           <%= text_field_tag :email, params[:email] %>
+           <%= text_field_tag :email, params[:email], class:"form-control" %>
          </div>
-         <div class="login-field">
+
+         <div class="field">
            <%= label_tag :password %>
-           <%= password_field_tag :password %>
+           <%= password_field_tag :password, params[:password], class:"form-control" %>
          </div>
-          <p class='tags'><%= submit_tag "Log In", class: "button" %></p>
+
+          <p class='tags'><%= submit_tag "Log In", class: "btn btn-success" %></p>
          <% end %>
-       <p class='tags'><%= link_to 'Sign Up', new_session_path, class: "butttton" %></p>
+       <p class='tags'>Not register? <%= link_to 'Sign Up', signup_path, class:"avior" %></p>
 </div>
+
