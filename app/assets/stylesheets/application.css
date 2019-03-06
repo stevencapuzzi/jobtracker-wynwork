@@ -40,4 +40,10 @@
 
 .avior {
   font-family: "Aviano Future Heavy Fast";
+
+.centered{
+  text-align: center;
 }
+.fab{
+  font-size: 2rem;
+
