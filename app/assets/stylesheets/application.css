@@ -68,3 +68,6 @@ a:visited {
 .blue{
   color: blue !important; 
 }
+#fullwide{
+  width: 100% !important;
+}
