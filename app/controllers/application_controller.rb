@@ -2,11 +2,19 @@ class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
     include SessionsHelper
     def current_applicant
-        Applicant.find(session[:applicant_id])
+       if session[:applicant_id]
+          Applicant.find(session[:applicant_id])
+       else
+        nil
+       end
     end
 
     def current_admin
+      if session[:admin_id]
         Admin.find(session[:admin_id])
+      else
+        nil
+      end
     end
     
     private

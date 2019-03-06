@@ -4,7 +4,10 @@ class ApplicantsController < ApplicationController
   # GET /applicants
   # GET /applicants.json
   def index
-    @applicants = Applicant.all
+    if current_applicant
+      redirect_to root_url
+    end
+    @applicants = Applicant.all.order(created_at: :desc)
   end
 
   # GET /applicants/1

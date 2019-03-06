@@ -1,41 +1,44 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <p  class="fontz" >
+        <span>Name:</span>
+        <%= @applicant.name %>
+      </p>
+      <p class="fontz" >
+        <strong>Phone:</strong>
+        <%= @applicant.phone %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p class="fontz" >
+        <strong>Email:</strong>
+        <%= @applicant.email %>
+      </p>
+      <p class="fontz" >
+        <strong>Linkedin:</strong>
+        <%= @applicant.linkedin %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p class="fontz" >
+        <strong>Cohort:</strong>
+        <%= @applicant.cohort %>
+      </p>
+      <p class="fontz" >
+        <strong>Github:</strong>
+        <%= @applicant.github %>
+      </p>
+    </div>
+  </div>
+</div>
 <div class="margindiv">
-<p  class="fontz" >
-  <span>Name:</span>
-  <%= @applicant.name %>
-</p>
-
-<p class="fontz" >
-  <strong>Cohort:</strong>
-  <%= @applicant.cohort %>
-</p>
-
-<p class="fontz" >
-  <strong>Email:</strong>
-  <%= @applicant.email %>
-</p>
-
-<p class="fontz" >
-  <strong>Phone:</strong>
-  <%= @applicant.phone %>
-</p>
-
 <p class="fontz" >
   <strong>Bio:</strong>
   <%= @applicant.bio %>
 </p>
-
-<p class="fontz" >
-  <strong>Linkedin:</strong>
-  <%= @applicant.linkedin %>
-</p>
-
-<p class="fontz" >
-  <strong>Github:</strong>
-  <%= @applicant.github %>
-</p>
 <hr />
-
 <h1>Jobs</h1>
 
 <table class="table">
@@ -65,6 +68,5 @@
 </table>
 
 <%= link_to 'Back', applicants_path, class:"badge badge-light" %>
-<%= link_to 'Logout', logout_url, class:"badge badge-light" %>
 
 </div>
