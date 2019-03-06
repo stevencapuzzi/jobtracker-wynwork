@@ -33,8 +33,9 @@
  
 }
 .fontz{
-  font-weight: bold;
+  /* font-weight: bold; */
   /* font-size: 2rem; */
+  font-size: 1.1rem;
 }
 
 .centered{
@@ -42,4 +43,21 @@
 }
 .fab{
   font-size: 2rem;
+  color: black !important;
+}
+a:visited {
+  color: white;
+}
+
+.fontz a {
+  color: blue;
+}
+.marginbot{
+  margin-bottom: 2rem;
+}
+.createdby{
+  margin-top: 10rem;
+}
+.marginal{
+  margin-top: 2rem;
 }

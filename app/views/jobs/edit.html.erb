@@ -5,7 +5,9 @@
 <%= render 'form', job: @job %>
 
 <div class="margindiv">
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>
 
+<div class="blue">
+<%= link_to 'Show', @job, class: "btn btn-success"  %> |
+<%= link_to 'Back', jobs_path, class: "btn btn-success"  %>
+</div>
 </div>
