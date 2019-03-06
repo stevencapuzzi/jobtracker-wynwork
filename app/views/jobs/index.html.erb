@@ -24,7 +24,7 @@
         <td class="fontz" ><%= job.company %></td>
         <td class="fontz" ><%= job.position %></td>
         <td class="fontz" ><%= job.status %></td>
-        <td class="fontz" ><%= job.link %></td>
+        <td class="fontz" ><a href="<%= job.link %>" target="_blank" rel="noopener noreferrer"><%= job.link %></a></td>
         <td class="fontz" ><%= link_to 'Show', job, class:"blue" %></td>
         <td class="fontz" ><%= link_to 'Edit', edit_job_path(job) %></td>
         <td class="fontz" ><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
