@@ -1,4 +1,6 @@
-<%= form_with(model: job, local: true) do |form| %>
+<div class="formdiv">
+
+  <%= form_with(model: job, local: true) do |form| %>
   <% if job.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
@@ -13,25 +15,26 @@
 
   <div class="field">
     <%= form.label :company %>
-    <%= form.text_field :company %>
+    <%= form.text_field :company, class:"form-control"  %>
   </div>
 
   <div class="field">
     <%= form.label :position %>
-    <%= form.text_field :position %>
+    <%= form.text_field :position, class:"form-control"  %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.text_field :status, class:"form-control"  %>
   </div>
 
   <div class="field">
     <%= form.label :link %>
-    <%= form.text_field :link %>
+    <%= form.text_field :link, class:"form-control"  %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-success"%>
   </div>
+</div>
 <% end %>
