@@ -1,36 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<p  class="fontz" >
+  <span>Name:</span>
   <%= @applicant.name %>
 </p>
 
-<p>
+<p class="fontz" >
   <strong>Cohort:</strong>
   <%= @applicant.cohort %>
 </p>
 
-<p>
+<p class="fontz" >
   <strong>Email:</strong>
   <%= @applicant.email %>
 </p>
 
-<p>
+<p class="fontz" >
   <strong>Phone:</strong>
   <%= @applicant.phone %>
 </p>
 
-<p>
+<p class="fontz" >
   <strong>Bio:</strong>
   <%= @applicant.bio %>
 </p>
 
-<p>
+<p class="fontz" >
   <strong>Linkedin:</strong>
   <%= @applicant.linkedin %>
 </p>
 
-<p>
+<p class="fontz" >
   <strong>Github:</strong>
   <%= @applicant.github %>
 </p>
@@ -64,6 +64,6 @@
   </tbody>
 </table>
 
-<%= link_to 'Back', applicants_path %>
-<%= link_to 'Logout', logout_url %>
+<%= link_to 'Back', applicants_path, class:"badge badge-light" %>
+<%= link_to 'Logout', logout_url, class:"badge badge-light" %>
 

@@ -26,9 +26,11 @@
 }
 .margindiv{
   margin-left: 5rem !important;
+   margin-right: 5rem;
 }
 .formdiv{
   margin-left: 5rem;
+ 
 }
 .fontz{
   font-weight: bold;
