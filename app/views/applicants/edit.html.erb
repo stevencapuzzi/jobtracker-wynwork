@@ -1,6 +1,10 @@
+<div class="margindiv">
+
 <h1>Editing Applicant</h1>
 
 <%= render 'form', applicant: @applicant %>
 
-<%= link_to 'Show', @applicant %> |
-<%= link_to 'Back', applicants_path %>
+<%= link_to 'Show', @applicant, class:"btn btn-success" %> |
+<%= link_to 'Back', applicants_path, class:"btn btn-success" %>
+<hr>
+</div>
