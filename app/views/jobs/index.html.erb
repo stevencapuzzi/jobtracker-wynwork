@@ -20,7 +20,7 @@
     <% @jobs.each do |job| %>
       <tr>
         
-        <td class="fontz" ><%= job.created_at %></td>
+        <td class="fontz" ><%= job.created_at.to_formatted_s(:short) %></td>
         <td class="fontz" ><%= job.company %></td>
         <td class="fontz" ><%= job.position %></td>
         <td class="fontz" ><%= job.status %></td>
@@ -36,5 +36,4 @@
 <br>
 
 <%= link_to 'New Job', new_job_path, class:"btn btn-success" %>
-<%= link_to 'Logout', logout_url, class:"btn btn-success" %>
 </div>

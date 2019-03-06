@@ -1,41 +1,44 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <p  class="fontz" >
+        <span>Name:</span>
+        <%= @applicant.name %>
+      </p>
+      <p class="fontz" >
+        <strong>Phone:</strong>
+        <%= @applicant.phone %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p class="fontz" >
+        <strong>Email:</strong>
+        <%= @applicant.email %>
+      </p>
+      <p class="fontz" >
+        <strong>Linkedin:</strong>
+        <%= @applicant.linkedin %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p class="fontz" >
+        <strong>Cohort:</strong>
+        <%= @applicant.cohort %>
+      </p>
+      <p class="fontz" >
+        <strong>Github:</strong>
+        <%= @applicant.github %>
+      </p>
+    </div>
+  </div>
+</div>
 <div class="margindiv">
-<p  class="fontz" >
-  <span>Name:</span>
-  <%= @applicant.name %>
-</p>
-
-<p class="fontz" >
-  <strong>Cohort:</strong>
-  <%= @applicant.cohort %>
-</p>
-
-<p class="fontz" >
-  <strong>Email:</strong>
-  <%= @applicant.email %>
-</p>
-
-<p class="fontz" >
-  <strong>Phone:</strong>
-  <%= @applicant.phone %>
-</p>
-
 <p class="fontz" >
   <strong>Bio:</strong>
   <%= @applicant.bio %>
 </p>
-
-<p class="fontz" >
-  <strong>Linkedin:</strong>
-  <%= @applicant.linkedin %>
-</p>
-
-<p class="fontz" >
-  <strong>Github:</strong>
-  <%= @applicant.github %>
-</p>
 <hr />
-
 <h1>Jobs</h1>
 
 <table class="table">
@@ -55,7 +58,7 @@
     <% @jobs.each do |job| %>
       <tr>
         
-        <td><%= job.created_at %></td>
+        <td><%= job.created_at.to_formatted_s(:short) %></td>
         <td><%= job.company %></td>
         <td><%= job.position %></td>
         <td><%= job.status %></td>
@@ -68,7 +71,6 @@
   </tbody>
 </table>
 
-<%= link_to 'Back', applicants_path, class: "btn btn-success"  %>
-<%= link_to 'Logout', logout_url, class: "btn btn-success" %>
+<%= link_to 'Back', applicants_path, class:"btn btn-success" %>
 
 </div>
