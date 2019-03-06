@@ -38,9 +38,12 @@
   /* font-size: 2rem; */
   font-size: 1rem;
 }
-
 .avior {
   font-family: "Aviano Future Heavy Fast";
+}
+.avior:hover {
+  color: #28a745;
+  background: none;
 }
 .centered{
   text-align: center;
