@@ -2,33 +2,33 @@
 
 <h1>Applicants</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Cohort</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Bio</th>
-      <th>Linkedin</th>
-      <th>Github</th>
-      <th colspan="3"></th>
+      <th scope="col" class="test">Name</th>
+      <th scope="col">Cohort</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Bio</th>
+      <th scope="col">Linkedin</th>
+      <th scope="col">Github</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @applicants.each do |applicant| %>
       <tr>
-        <td><%= applicant.name %></td>
-        <td><%= applicant.cohort %></td>
-        <td><%= applicant.email %></td>
-        <td><%= applicant.phone %></td>
-        <td><%= applicant.bio %></td>
-        <td><%= applicant.linkedin %></td>
-        <td><%= applicant.github %></td>
-        <td><%= link_to 'Show', applicant %></td>
-        <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
-        <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="fontz" ><%= applicant.name %></td>
+        <td class="fontz" ><%= applicant.cohort %></td>
+        <td class="fontz" ><%= applicant.email %></td>
+        <td class="fontz" ><%= applicant.phone %></td>
+        <td class="fontz" ><%= applicant.bio %></td>
+        <td class="fontz" ><%= applicant.linkedin %></td>
+        <td class="fontz" ><%= applicant.github %></td>
+        <td class="fontz" ><%= link_to 'Show', applicant %></td>
+        <td class="fontz" ><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
+        <td class="fontz" ><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

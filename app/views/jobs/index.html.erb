@@ -2,27 +2,27 @@
 
 <h1>Jobs</h1>
 
-<table>
+<table class="table">
   <thead>
-    <tr>
-      <th>Company</th>
-      <th>Position</th>
-      <th>Status</th>
-      <th>Link</th>
-      <th colspan="3"></th>
+    <tr scope="col" >
+      <th scope="col"  >Company</th>
+      <th scope="col" >Position</th>
+      <th scope="col" >Status</th>
+      <th scope="col" >Link</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= job.company %></td>
-        <td><%= job.position %></td>
-        <td><%= job.status %></td>
-        <td><%= job.link %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="fontz" ><%= job.company %></td>
+        <td class="fontz" ><%= job.position %></td>
+        <td class="fontz" ><%= job.status %></td>
+        <td class="fontz" ><%= job.link %></td>
+        <td class="fontz" ><%= link_to 'Show', job %></td>
+        <td class="fontz" ><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td class="fontz" ><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
