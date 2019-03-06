@@ -13,12 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ @import url(//db.onlinewebfonts.com/c/8fb222e4a45b1dcdd3000a76beb706e2?family=Aviano+Future+Heavy+Fast);
+ 
 *{
   margin: 0 ;
   padding: 0;
   font-family: 'Roboto',
   sans-serif;
-
 }
 
 .form-control{
@@ -38,6 +39,9 @@
   font-size: 1.1rem;
 }
 
+.avior {
+  font-family: "Aviano Future Heavy Fast";
+}
 .centered{
   text-align: center;
 }
