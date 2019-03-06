@@ -34,17 +34,43 @@
  
 }
 .fontz{
-  font-weight: bold;
+  /* font-weight: bold; */
   /* font-size: 2rem; */
+  font-size: 1rem;
 }
-
 .avior {
   font-family: "Aviano Future Heavy Fast";
+}
+.avior:hover {
+  color: #28a745;
+  background: none;
 }
 .centered{
   text-align: center;
 }
 .fab{
   font-size: 2rem;
+  color: black !important;
+}
+a:visited {
+  color: white;
 }
 
+.fontz a {
+  color: blue;
+}
+.marginbot{
+  margin-bottom: 2rem;
+}
+.createdby{
+  margin-top: 10rem;
+}
+.marginal{
+  margin-top: 2rem;
+}
+.blue{
+  color: blue !important; 
+}
+#fullwide{
+  width: 100% !important;
+}

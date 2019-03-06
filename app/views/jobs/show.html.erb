@@ -18,7 +18,11 @@
 
 <p class="fontz">
   <strong>Link:</strong>
-  <%= @job.link %>
+  <a href="<%= @job.link %>" target="_blank" rel="noopener noreferrer"> <%= @job.link %></a>
+</p>
+<p class="fontz">
+  <strong>Date Applied</strong>
+  <%= @job.created_at %>
 </p>
 
 <p class="fontz">
@@ -26,7 +30,7 @@
   <%= @job.applicant_id %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Edit', edit_job_path(@job), class: "btn btn-success"  %> |
+<%= link_to 'Back', jobs_path, class: "btn btn-success"  %>
 
 </div>

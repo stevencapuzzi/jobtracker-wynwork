@@ -6,7 +6,9 @@
 <table class="table">
   <thead>
     <tr scope="col" >
-      <th scope="col"  >Company</th>
+      
+      <th scope="col" >Date Applied</th>
+      <th scope="col" >Company</th>
       <th scope="col" >Position</th>
       <th scope="col" >Status</th>
       <th scope="col" >Link</th>
@@ -17,11 +19,13 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
+        
+        <td class="fontz" ><%= job.created_at %></td>
         <td class="fontz" ><%= job.company %></td>
         <td class="fontz" ><%= job.position %></td>
         <td class="fontz" ><%= job.status %></td>
-        <td class="fontz" ><%= job.link %></td>
-        <td class="fontz" ><%= link_to 'Show', job %></td>
+        <td class="fontz" ><a href="<%= job.link %>" target="_blank" rel="noopener noreferrer"><%= job.link %></a></td>
+        <td class="fontz" ><%= link_to 'Show', job, class:"blue" %></td>
         <td class="fontz" ><%= link_to 'Edit', edit_job_path(job) %></td>
         <td class="fontz" ><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -31,6 +35,6 @@
 
 <br>
 
-<%= link_to 'New Job', new_job_path, class:"badge badge-light" %>
-<%= link_to 'Logout', logout_url, class:"badge badge-light" %>
+<%= link_to 'New Job', new_job_path, class:"btn btn-success" %>
+<%= link_to 'Logout', logout_url, class:"btn btn-success" %>
 </div>
