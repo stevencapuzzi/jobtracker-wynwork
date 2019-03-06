@@ -65,3 +65,6 @@ a:visited {
 .marginal{
   margin-top: 2rem;
 }
+.blue{
+  color: blue !important; 
+}

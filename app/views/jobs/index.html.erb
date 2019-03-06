@@ -6,6 +6,7 @@
 <table class="table">
   <thead>
     <tr scope="col" >
+      <th scope="col"  >Date Applied</th>
       <th scope="col"  >Company</th>
       <th scope="col" >Position</th>
       <th scope="col" >Status</th>
@@ -17,11 +18,12 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
+        <td class="fontz" ><%= job.created_at %>
         <td class="fontz" ><%= job.company %></td>
         <td class="fontz" ><%= job.position %></td>
         <td class="fontz" ><%= job.status %></td>
         <td class="fontz" ><%= job.link %></td>
-        <td class="fontz" ><%= link_to 'Show', job %></td>
+        <td class="fontz" ><%= link_to 'Show', job, class:"blue" %></td>
         <td class="fontz" ><%= link_to 'Edit', edit_job_path(job) %></td>
         <td class="fontz" ><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
