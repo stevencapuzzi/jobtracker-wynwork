@@ -76,6 +76,7 @@
   width: 100% !important;
 }
 a:hover{
+  color: grey;
   text-decoration: none;
 }
 a:visited {

@@ -30,11 +30,13 @@
         <a class="nav-link" href="#">Events <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" id="white" href="/about">About</a>
       </li> 
     </ul>
   </div>
+
   <% if current_applicant || current_admin %>
+  
   <div class="collapse navbar-collapse" id="navbarNav">
       <span class="navbar-text">
       <%= current_applicant ? current_applicant.name : current_admin.name %>
