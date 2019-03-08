@@ -79,5 +79,11 @@ a:hover{
   text-decoration: none;
 }
 a:visited {
-  color: white;
+  color: blue;
+}
+#white{
+  color: white !important;
+}
+#marginal{
+  width: 100% !important;
 }
