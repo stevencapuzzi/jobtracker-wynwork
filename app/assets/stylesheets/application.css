@@ -41,6 +41,10 @@
 .avior {
   font-family: "Aviano Future Heavy Fast";
 }
+
+#signup{
+  color: black;
+}
 .avior:hover {
   color: #28a745;
   background: none;
@@ -51,9 +55,6 @@
 .fab{
   font-size: 2rem;
   color: black !important;
-}
-a:visited {
-  color: white;
 }
 
 .fontz a {
