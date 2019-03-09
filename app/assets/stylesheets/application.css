@@ -97,3 +97,10 @@ footer{
 .text-muted{
   text-align: center;
 }
+
+.nav-link:hover{
+  background-color: lightblue;
+}
+.fontz a:hover{
+  background-color: lightblue;
+}
