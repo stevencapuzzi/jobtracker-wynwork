@@ -29,12 +29,5 @@ class SessionsController < ApplicationController
    redirect_to new_session_path notice: 'Logged out!'
  end 
 
-
-
-  private
-  # This is spelled wrong and unused
-  def alloed_params
-    params.require(:applicant).permit(:email, :password_digest)
-  end
 end
 
