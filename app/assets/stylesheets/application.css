@@ -46,7 +46,7 @@
   color: black;
 }
 .avior:hover {
-  color: #28a745;
+  color: ;
   background: none;
 }
 .centered{
@@ -98,9 +98,57 @@ footer{
   text-align: center;
 }
 
+
 .nav-link:hover{
   background-color: lightblue;
 }
 .fontz a:hover{
   background-color: lightblue;
 }
+
+.box span {
+	width: 20px;
+	height: 20px;
+  display: block;
+	border-right: 2px solid #17a2b8;
+	border-bottom: 2px solid #17a2b8;
+	transform: rotate(45deg);
+	margin: -10px;
+  animation: animate 2s infinite;
+  margin-left: 2rem;
+}
+
+.box span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+.box span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#left{
+  animation: moveIn 1s ease-out;
+  animation-duration: 3s;
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-650px) rotateX(90deg);;
+    transform: rotateX(90deg);
+  }
+}
+
