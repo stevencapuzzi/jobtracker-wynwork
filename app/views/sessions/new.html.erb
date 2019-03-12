@@ -1,6 +1,8 @@
-<div class="formdiv">
-
-        <%= form_tag({controller: "sessions", action: "create"}) do %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm" id="left">
+      
+       <%= form_tag({controller: "sessions", action: "create"}) do %>
 
           <div class="container">
             <% flash.each do |key, value| %>
@@ -18,10 +20,27 @@
            <%= label_tag :password %>
            <%= password_field_tag :password, params[:password], class:"form-control" %>
          </div>
+           <div class="box">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <br /><br />
+
 
           <p class='tags'><%= submit_tag "Log In", class: "btn btn-info", id:"white"  %></p>
          <% end %>
        <p class='tags'>Not registered? <%= link_to 'Sign Up', signup_path, class:"avior" %></p>
 </div>
 
-`
+
+
+
+
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+       
