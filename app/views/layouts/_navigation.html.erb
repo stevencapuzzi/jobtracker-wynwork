@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-info" id="marginal">
+  <%= link_to  "JobTracker", root_url, class:"navbar-brand avior" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/events">Events <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="white" href="/about">About</a>
+      </li> 
+    </ul>
+  </div>
+
+  <% if current_applicant || current_admin %>
+  
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <span class="navbar-text">
+      <%= current_applicant ? current_applicant.name : current_admin.name %>
+    </span>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <%= link_to  "Logout", logout_url, class:"nav-link" %>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</nav>

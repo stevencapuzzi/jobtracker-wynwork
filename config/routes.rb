@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :applicants
   resources :sessions
   resources :about
+  resources :event
 
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'login', to: 'sessions#new', as: 'login' 
