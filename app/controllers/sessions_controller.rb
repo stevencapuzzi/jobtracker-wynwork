@@ -32,6 +32,7 @@ class SessionsController < ApplicationController
 
 
   private
+  # This is spelled wrong and unused
   def alloed_params
     params.require(:applicant).permit(:email, :password_digest)
   end
