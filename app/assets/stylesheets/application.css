@@ -13,109 +13,105 @@
  *= require_tree .
  *= require_self
  */
- @import url(//db.onlinewebfonts.com/c/8fb222e4a45b1dcdd3000a76beb706e2?family=Aviano+Future+Heavy+Fast);
- 
-*{
-  margin: 0 ;
-  padding: 0;
-  font-family: 'Roboto',
-  sans-serif;
+@import url(//db.onlinewebfonts.com/c/8fb222e4a45b1dcdd3000a76beb706e2?family=Aviano+Future+Heavy+Fast);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
 }
 
-.form-control{
-  width: 40% !important;
+.form-control {
+	width: 40% !important;
 }
-.margindiv{
-  margin-left: 5rem !important;
-   margin-right: 5rem;
+.margindiv {
+	margin-left: 5rem !important;
+	margin-right: 5rem;
 }
-.formdiv{
-  margin-left: 5rem;
- 
+.formdiv {
+	margin-left: 5rem;
 }
-.fontz{
-  /* font-weight: bold; */
-  /* font-size: 2rem; */
-  font-size: 1rem;
+.fontz {
+	/* font-weight: bold; */
+	/* font-size: 2rem; */
+	font-size: 1rem;
 }
 .avior {
-  font-family: "Aviano Future Heavy Fast";
+	font-family: 'Aviano Future Heavy Fast';
 }
 
-#signup{
-  color: black;
+#signup {
+	color: black;
 }
 .avior:hover {
-  
-  background: none;
+	background: none;
 }
-.centered{
-  text-align: center;
+.centered {
+	text-align: center;
 }
-.fab{
-  font-size: 2rem;
-  color: black !important;
+.fab {
+	font-size: 2rem;
+	color: black !important;
 }
 
 .fontz a {
-  color: blue;
+	color: blue;
 }
-.marginbot{
-  margin-bottom: 2rem;
+.marginbot {
+	margin-bottom: 2rem;
 }
-.createdby{
-  margin-top: 10rem;
+.createdby {
+	margin-top: 10rem;
 }
-.marginal{
-  margin-top: 2rem;
+.marginal {
+	margin-top: 2rem;
 }
-.blue{
-  color: blue !important; 
+.blue {
+	color: blue !important;
 }
-#fullwide{
-  width: 100% !important;
+#fullwide {
+	width: 100% !important;
 }
-a:hover{
-  color: grey;
-  text-decoration: none;
+a:hover {
+	color: grey;
+	text-decoration: none;
 }
 a:visited {
-  color: blue;
+	color: blue;
 }
-#white{
-  color: white !important;
+#white {
+	color: white !important;
 }
-#marginal{
-  width: 100% !important;
+#marginal {
+	width: 100% !important;
 }
-footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
 }
-.text-muted{
-  text-align: center;
+.text-muted {
+	text-align: center;
 }
 
-
-.nav-link:hover{
-  background-color: lightblue;
+.nav-link:hover {
+	background-color: lightblue;
 }
-.fontz a:hover{
-  background-color: lightblue;
+.fontz a:hover {
+	background-color: lightblue;
 }
 
 .box span {
 	width: 20px;
 	height: 20px;
-  display: block;
+	display: block;
 	border-right: 2px solid #17a2b8;
 	border-bottom: 2px solid #17a2b8;
 	transform: rotate(45deg);
 	margin: -10px;
-  animation: animate 2s infinite;
-  margin-left: 2rem;
+	animation: animate 2s infinite;
+	margin-left: 2rem;
 }
 
 .box span:nth-child(2) {
@@ -139,16 +135,19 @@ footer{
 	}
 }
 
-#left{
-  animation: moveIn 1s ease-out;
-  animation-duration: 3s;
+#left {
+	animation: moveIn 1s ease-out;
+	animation-duration: 3s;
 }
 
 @keyframes moveIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-650px) rotateX(90deg);;
-    transform: rotateX(90deg);
-  }
+	0% {
+		opacity: 0;
+		transform: translateX(-650px) rotateX(90deg);
+		transform: rotateX(90deg);
+	}
 }
 
+.collab {
+	margin: 2rem;
+}
