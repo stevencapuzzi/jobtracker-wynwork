@@ -61,7 +61,7 @@
 	margin-bottom: 2rem;
 }
 .createdby {
-	margin-top: 10rem;
+	margin-top: 2rem;
 }
 .marginal {
 	margin-top: 2rem;
@@ -150,4 +150,8 @@ footer {
 
 .collab {
 	margin: 2rem;
+	font-size: 2rem;
+}
+.collab-tab {
+	width: 75%;
 }
