@@ -12,6 +12,9 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    if current_applicant.id != @job.applicant_id
+      redirect_to root_url
+    end
   end
 
   # GET /jobs/new
