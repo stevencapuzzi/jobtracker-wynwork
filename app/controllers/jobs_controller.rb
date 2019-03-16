@@ -2,6 +2,7 @@ class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
   before_action :is_signed_in?
   before_action :admin_home?, only: [:index]
+  before_action :rightful_user
 
   # GET /jobs
   # GET /jobs.json
@@ -12,9 +13,9 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
-    if current_applicant.id != @job.applicant_id
-      redirect_to root_url
-    end
+    # if current_applicant.id != @job.applicant_id
+    #   redirect_to root_url
+    # end
   end
 
   # GET /jobs/new
@@ -77,4 +78,10 @@ class JobsController < ApplicationController
     def job_params
       params.require(:job).permit(:company, :position, :status, :link)
     end
+
+    def rightful_user
+      if current_applicant.id != @job.applicant_id
+         redirect_to root_url
+       end
+   end
 end
