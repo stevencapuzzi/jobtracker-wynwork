@@ -154,3 +154,6 @@ footer {
 .collab-tab {
 	width: 75%;
 }
+ul li {
+  list-style-type: none;
+}
