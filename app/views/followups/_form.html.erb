@@ -13,25 +13,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field marginal">
   <%= form.label :number %>
-  <%= form.select :number, ['1', '2','3','4','5'], class:"custom-select-sm marginal"%>
+  <%= form.select :number, ['1st', '2nd','3rd','4th','5th'], class:"custom-select marginal"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :mode %>
+    <%= form.select :mode, ['Email', 'Phone', 'LinkedIn', 'In Person', 'Other'],class:"custom-select"  %>
   </div>
 
   <div class="field">
     <%= form.label :contact %>
-    <%= form.text_field :contact, class:"form-control"  %>
+    <%= form.text_field :contact, autocomplete: 'off', class:"form-control"  %>
   </div>
 
   
     
 
-  <div class="field">
-    <%= form.label :mode %>
-    <%= form.text_field :mode, class:"form-control"  %>
-  </div>
+  
 
-  <div class="actions">
+  <div class="actions marginal">
     <%= form.submit class:"btn btn-info", id:"white" %>
   </div>
 </div>

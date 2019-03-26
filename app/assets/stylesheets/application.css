@@ -32,8 +32,6 @@
 	margin-left: 5rem;
 }
 .fontz {
-	/* font-weight: bold; */
-	/* font-size: 2rem; */
 	font-size: 1rem;
 }
 .avior {
@@ -54,9 +52,9 @@
 	color: black !important;
 }
 
-.fontz a {
+/* .fontz a {
 	color: blue;
-}
+} */
 .marginbot {
 	margin-bottom: 2rem;
 }
