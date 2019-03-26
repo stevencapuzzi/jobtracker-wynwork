@@ -33,6 +33,7 @@
   <thead>
     <tr scope="col" >
       
+      <th scope="col" >Created</th>
       <th scope="col" >#</th>
       <th scope="col" >Contact</th>
       <th scope="col" >Mode</th>
@@ -49,10 +50,8 @@
         <td class="fontz" ><%= followup.number %></td>
         <td class="fontz" ><%= followup.contact %></td>
         <td class="fontz" ><%= followup.mode %></td>
-        <td class="fontz" ><a href="<%= followup.link %>" target="_blank" rel="noopener noreferrer"><%= followup.link %></a></td>
-        <td class="fontz" ><%= link_to 'Show', followup, class:"blue" %></td>
-        <td class="fontz" ><%= link_to 'Edit', edit_job_path(followup) %></td>
-        <td class="fontz" ><%= link_to 'Destroy', followup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="fontz" ><%= link_to 'Edit', edit_job_followup_path(followup.job_id, followup.id) %></td>
+
       </tr>
     <% end %>
   </tbody>

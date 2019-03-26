@@ -1,6 +1,6 @@
 <div class="formdiv">
 
- <%= form_for([job, Followup.new]) do |form| %>
+ <%= form_for([job, followup]) do |form| %>
   <% if followup.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(followup.errors.count, "error") %> prohibited this job from being saved:</h2>
