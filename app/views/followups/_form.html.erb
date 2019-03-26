@@ -14,14 +14,22 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :number %>
+      <select class="custom-select-sm marginal">
+        <option selected>#</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+  </div>
+
+  <div class="field">
     <%= form.label :contact %>
     <%= form.text_field :contact, class:"form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number, class:"form-control"  %>
-  </div>
+  
+    
 
   <div class="field">
     <%= form.label :mode %>
