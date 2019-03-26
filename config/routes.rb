@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
   root 'jobs#index'
-  resources :jobs
+  resources :jobs do
+    resources :followups
+  end
   resources :admins
   resources :applicants
   resources :sessions
   resources :about
   resources :event
+
 
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'login', to: 'sessions#new', as: 'login' 

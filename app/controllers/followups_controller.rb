@@ -1,5 +1,6 @@
-class JobsController < ApplicationController
+class FollowupsController < ApplicationController
   before_action :set_followup, only: [:show, :edit, :update, :destroy]
+  before_action :set_job, only: [:new, :create]
   before_action :is_signed_in?
 
 
@@ -7,7 +8,7 @@ class JobsController < ApplicationController
 
   # GET /jobs/new
   def new
-    @followup = Job.new
+    @followup = Followup.new
   end
 
   # GET /jobs/1/edit
@@ -18,9 +19,15 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @followup = Followup.new(followup_params)
+    @followup.job = @job
 
     respond_to do |format|
       if @followup.save
+        format.html { redirect_to @job, notice: 'Follow Up was successfully created.' }
+      else
+        format.html { render :new }
+        format.json { render json: @followup.errors, status: :unprocessable_entity }
+    end
     end
   end
 
@@ -31,6 +38,7 @@ class JobsController < ApplicationController
       if @followup.update(job_params)
         format.html { redirect_to @job, notice: 'Job was successfully updated.' }
         format.json { render :show, status: :ok, location: @job }
+      end
     end
   end
 
@@ -46,13 +54,17 @@ class JobsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_job
+    def set_followup
       @followup = Followup.find(params[:id])
+    end
+
+    def set_job
+      @job = Job.find(params[:job_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def followup_params
-      params.require(:followup).permit(:contact, :number, :mode)
+      params.require(:followup).permit(:contact, :number, :mode, :job_id)
     end
 
 end
