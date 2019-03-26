@@ -1,6 +1,6 @@
 class FollowupsController < ApplicationController
   before_action :set_followup, only: [:show, :edit, :update, :destroy]
-  before_action :set_job, only: [:new, :create]
+  before_action :set_job, only: [:new, :create, :destroy, :edit, :update]
   before_action :is_signed_in?
 
 
@@ -35,8 +35,8 @@ class FollowupsController < ApplicationController
   # PATCH/PUT /jobs/1.json
   def update
     respond_to do |format|
-      if @followup.update(job_params)
-        format.html { redirect_to @job, notice: 'Job was successfully updated.' }
+      if @followup.update(followup_params)
+        format.html { redirect_to @job, notice: 'Follow Up was successfully updated.' }
         format.json { render :show, status: :ok, location: @job }
       end
     end
@@ -47,7 +47,7 @@ class FollowupsController < ApplicationController
   def destroy
     @followup.destroy
     respond_to do |format|
-      format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
+      format.html { redirect_to @job, notice: 'Follow Up was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
