@@ -51,6 +51,7 @@
         <td class="fontz" ><%= followup.contact %></td>
         <td class="fontz" ><%= followup.mode %></td>
         <td class="fontz" ><%= link_to 'Edit', edit_job_followup_path(followup.job_id, followup.id) %></td>
+        <td class="fontz" ><%= link_to 'Delete', job_followup_path(followup.job_id, followup.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
     <% end %>
