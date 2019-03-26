@@ -12,6 +12,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @followups = Followup.where(job_id: @job.id)
   end
 
   # GET /jobs/new

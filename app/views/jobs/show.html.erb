@@ -25,9 +25,37 @@
   <%= @job.created_at %>
 </p>
 
-
-
 <%= link_to 'Edit', edit_job_path(@job), class:"btn btn-info", id:"white"  %> 
 <%= link_to 'Back', applicants_path, class:"btn btn-info", id:"white"  %>
+
+
+<table class="table">
+  <thead>
+    <tr scope="col" >
+      
+      <th scope="col" >#</th>
+      <th scope="col" >Contact</th>
+      <th scope="col" >Mode</th>
+    
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @followups.each do |followup| %>
+      <tr>
+        
+        <td class="fontz" ><%= followup.created_at.to_formatted_s(:short) %></td>
+        <td class="fontz" ><%= followup.number %></td>
+        <td class="fontz" ><%= followup.contact %></td>
+        <td class="fontz" ><%= followup.mode %></td>
+        <td class="fontz" ><a href="<%= followup.link %>" target="_blank" rel="noopener noreferrer"><%= followup.link %></a></td>
+        <td class="fontz" ><%= link_to 'Show', followup, class:"blue" %></td>
+        <td class="fontz" ><%= link_to 'Edit', edit_job_path(followup) %></td>
+        <td class="fontz" ><%= link_to 'Destroy', followup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 </div>
