@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_05_164103) do
+ActiveRecord::Schema.define(version: 2019_03_26_142510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,16 @@ ActiveRecord::Schema.define(version: 2019_02_05_164103) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "followups", force: :cascade do |t|
+    t.integer "number"
+    t.string "contact"
+    t.string "mode"
+    t.bigint "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_followups_on_job_id"
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "company"
     t.string "position"
@@ -48,5 +58,6 @@ ActiveRecord::Schema.define(version: 2019_02_05_164103) do
     t.index ["applicant_id"], name: "index_jobs_on_applicant_id"
   end
 
+  add_foreign_key "followups", "jobs"
   add_foreign_key "jobs", "applicants"
 end
