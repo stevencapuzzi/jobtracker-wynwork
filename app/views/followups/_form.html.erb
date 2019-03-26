@@ -1,0 +1,36 @@
+<div class="formdiv">
+
+ <%= form_for([job, Followup.new]) do |form| %>
+  <% if followup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(followup.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% followup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.text_field :number, class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mode %>
+    <%= form.text_field :mode, class:"form-control"  %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-info", id:"white" %>
+  </div>
+</div>
+<% end %>
+<%= console%>
