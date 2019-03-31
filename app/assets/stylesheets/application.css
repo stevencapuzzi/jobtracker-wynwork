@@ -15,7 +15,6 @@
  */
 @import url(//db.onlinewebfonts.com/c/8fb222e4a45b1dcdd3000a76beb706e2?family=Aviano+Future+Heavy+Fast);
 
-
 * {
 	margin: 0;
 	padding: 0;
@@ -155,5 +154,8 @@ footer {
 	width: 75%;
 }
 ul li {
-  list-style-type: none;
+	list-style-type: none;
+}
+.job-box {
+	padding-bottom: 5rem;
 }
