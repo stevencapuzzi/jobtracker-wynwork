@@ -12,150 +12,151 @@
  *
  *= require_tree .
  *= require_self
+ *= require simple_calendar
  */
 @import url(//db.onlinewebfonts.com/c/8fb222e4a45b1dcdd3000a76beb706e2?family=Aviano+Future+Heavy+Fast);
 
 * {
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-control {
-	width: 40% !important;
+  width: 40% !important;
 }
 .margindiv {
-	margin-left: 5rem !important;
-	margin-right: 5rem;
+  margin-left: 5rem !important;
+  margin-right: 5rem;
 }
 .formdiv {
-	margin-left: 5rem;
+  margin-left: 5rem;
 }
 .fontz {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 .avior {
-	font-family: 'Aviano Future Heavy Fast';
+  font-family: 'Aviano Future Heavy Fast';
 }
 
 #signup {
-	color: black;
+  color: black;
 }
 .avior:hover {
-	background: none;
+  background: none;
 }
 .centered {
-	text-align: center;
+  text-align: center;
 }
 .fab {
-	font-size: 2rem;
-	color: black !important;
+  font-size: 2rem;
+  color: black !important;
 }
 
 /* .fontz a {
 	color: blue;
 } */
 .marginbot {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .createdby {
-	margin-top: 2rem;
+  margin-top: 2rem;
 }
 .marginal {
-	margin-top: 2rem;
+  margin-top: 2rem;
 }
 .blue {
-	color: blue !important;
+  color: blue !important;
 }
 #fullwide {
-	width: 100% !important;
+  width: 100% !important;
 }
 a:hover {
-	color: grey;
-	text-decoration: none;
+  color: grey;
+  text-decoration: none;
 }
 a:visited {
-	color: blue;
+  color: blue;
 }
 #white {
-	color: white !important;
+  color: white !important;
 }
 #marginal {
-	width: 100% !important;
+  width: 100% !important;
 }
 footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: 2.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
 .text-muted {
-	text-align: center;
+  text-align: center;
 }
 
 .nav-link:hover {
-	background-color: lightblue;
+  background-color: lightblue;
 }
 .fontz a:hover {
-	background-color: lightblue;
+  background-color: lightblue;
 }
 
 .box span {
-	width: 20px;
-	height: 20px;
-	display: block;
-	border-right: 2px solid #17a2b8;
-	border-bottom: 2px solid #17a2b8;
-	transform: rotate(45deg);
-	margin: -10px;
-	animation: animate 2s infinite;
-	margin-left: 2rem;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-right: 2px solid #17a2b8;
+  border-bottom: 2px solid #17a2b8;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+  margin-left: 2rem;
 }
 
 .box span:nth-child(2) {
-	animation-delay: -0.2s;
+  animation-delay: -0.2s;
 }
 
 .box span:nth-child(3) {
-	animation-delay: -0.4s;
+  animation-delay: -0.4s;
 }
 
 @keyframes animate {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-		transform: rotate(45deg) translate(10px, 10px);
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #left {
-	animation: moveIn 1s ease-out;
-	animation-duration: 3s;
+  animation: moveIn 1s ease-out;
+  animation-duration: 3s;
 }
 
 @keyframes moveIn {
-	0% {
-		opacity: 0;
-		transform: translateX(-650px) rotateX(90deg);
-		transform: rotateX(90deg);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(-650px) rotateX(90deg);
+    transform: rotateX(90deg);
+  }
 }
 
 .collab {
-	margin: 2rem;
-	font-size: 2rem;
+  margin: 2rem;
+  font-size: 2rem;
 }
 .collab-tab {
-	width: 75%;
+  width: 75%;
 }
 ul li {
-	list-style-type: none;
+  list-style-type: none;
 }
 .job-box {
-	padding-bottom: 5rem;
+  padding-bottom: 5rem;
 }
