@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :meetings
   root 'jobs#index'
   resources :jobs do
     resources :followups

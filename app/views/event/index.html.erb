@@ -1,1 +1,12 @@
-<h1 class="centered">Events Calendar Coming Soon</h1>
+<h1 class="centered">Events Calendar</h1>
+
+
+<%= month_calendar events: @meetings do |date, meetings| %>
+  <%= date %>
+
+  <% meetings.each do |meeting| %>
+    <div>
+      <%= meeting.name %>
+    </div>
+  <% end %>
+<% end %>
